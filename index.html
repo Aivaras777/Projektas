@@ -3,10 +3,30 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Drabužių parduotuvė</title>
     <link rel="stylesheet" href="style.css" />
-    <title>Document</title>
   </head>
   <body>
+    <header>
+      <nav class="nav">
+        <h1>BŪK MADINGAS</h1>
+        <input type="text" placeholder="Ieškoti..." />
+        <div><a href="#moterims">Moterims</a><a href="#vyrams">Vyrams</a></div>
+      </nav>
+    </header>
+    <div class="ft"><img src="ft.jpg" alt="" /></div>
+    <main>
+      <div class="container">
+        <div class="content" id="moterims"><h3>Drabužiai moterims</h3></div>
+        <div class="produktai-moterims"></div>
+
+        <div class="content" id="vyrams"><h3>Drabužiai vyrams</h3></div>
+        <div class="produktai-vyrams"></div>
+      </div>
+    </main>
+    <footer></footer>
+    <script src="api.js"></script>
+    <script src="HTMLgeneration.js"></script>
     <script src="index.js"></script>
   </body>
 </html>
