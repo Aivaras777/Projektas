@@ -1,15 +1,24 @@
 async function main() {
   const produktai = await getProductFromApi();
   generateHTML(produktai);
+  paieska(produktai);
 }
 main();
 
-const menu = document.querySelector(".nav");
-const content = document.querySelector(".content");
+const zodziai = document.querySelectorAll(".zodziai span");
+let index = 0;
 
-menu.addEventListener("click", () => {
-  content.scrollTo({
-    top: menu.offsetHeight,
-    behavior: "smooth",
-  });
-});
+function keistiZodzius() {
+  zodziai[index].classList.add("active");
+  setTimeout(() => {
+    zodziai[index].classList.remove("active");
+    index = (index + 1) % zodziai.length;
+    keistiZodzius();
+  }, 1500);
+}
+
+keistiZodzius();
+
+import getProductFromApi from "./api.js";
+import generateHTML from "./HTMLgeneration.js";
+import paieska from "./filterProduct.js";
